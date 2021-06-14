@@ -30,6 +30,10 @@ public class Posts {//언더스코어 네이밍으로 테이블 이름을 매칭
         this.author = author;
     }
 
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 
 
 
