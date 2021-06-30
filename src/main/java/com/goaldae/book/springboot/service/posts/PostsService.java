@@ -42,4 +42,10 @@ public class PostsService {
     public List<PostsListResponseDto> findAllDesc(){
         return postsRepository.findAllDesc().stream().map(PostsListResponseDto::new).collect(Collectors.toList());
     }
+    @Transactional
+    public void delete(Long id){
+        Posts posts = postsRepository.findById(id).orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id="+id));
+        //postsById 메소드를 활용하면 id로 삭제할 수도 있음
+        postsRepository.delete(posts);
+    }
 }
