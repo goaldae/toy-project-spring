@@ -1,5 +1,6 @@
 package com.goaldae.book.springboot.web;
 
+import com.goaldae.book.springboot.config.auth.LoginUser;
 import com.goaldae.book.springboot.config.auth.dto.SessionUser;
 import com.goaldae.book.springboot.service.posts.PostsService;
 import com.goaldae.book.springboot.web.dto.PostsResponseDto;
@@ -18,10 +19,9 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
-        model.addAttribute("posts", postsService.findAllDesc());
+    public String index(Model model, @LoginUser SessionUser user){
 
-        SessionUser user = (SessionUser) httpSession.getAttribute("user"); //현재 세션에 있는 로그인 유저를 불러와봄
+        model.addAttribute("posts", postsService.findAllDesc());
 
         if(user!=null){ //로그인 유저가 있으면 템플릿에 넘기기
             model.addAttribute("userName", user.getName());
