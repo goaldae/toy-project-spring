@@ -36,7 +36,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                 .getUserInfoEndpoint().getUserNameAttributeName(); //OAuth2 로그인 진행시 키가 되는 필드값
         //구글은 기본적으로 코드("sub")를 지원하지만 네이버, 카카오 등은 기본 지원하지 않음
 
-        OAuthAttributes attributes = OAuthAttributes.of(userNameAttributeName, oAuth2User.getAttributes());
+        OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
         //OAuth2UserService를 통해 가져온 OAuth2User의 Attribute를 담을 클래스
 
         User user = saveOrUpdate(attributes);
