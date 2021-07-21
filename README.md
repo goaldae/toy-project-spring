@@ -20,3 +20,7 @@
 > * AWS EC2 인스턴스 생성 및 탄력적 IP 연결
 > * EC2 인스턴스 접근위한 pem키 생성 및 puTTY위한 ppk 변환
 > * 리눅스 서버 구축
+> 
+> * AWS RDS MariaDB 생성
+> * 운영 환경에 맞는 파라미터 설정(타임존, Character Set, Max Connection)
+> * EC2, 로컬과 연결을 위한 보안 그룹 설정
