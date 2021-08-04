@@ -24,3 +24,7 @@
 > * AWS RDS MariaDB 생성
 > * 운영 환경에 맞는 파라미터 설정(타임존, Character Set, Max Connection)
 > * EC2, 로컬과 연결을 위한 보안 그룹 설정
+> 
+> * AWS EC2 서버 활용해 프로젝트 배포
+> * Linux shell 스크립트 작성
+> * 프로젝트(EC2)와 AWS RDS 연동
