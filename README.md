@@ -28,3 +28,5 @@
 > * AWS EC2 서버 활용해 프로젝트 배포
 > * Linux shell 스크립트 작성
 > * 프로젝트(EC2)와 AWS RDS 연동
+> 
+> travis CI - S3 - CdoeDeploy - EC2 연동
